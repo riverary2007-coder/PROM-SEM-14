@@ -1,0 +1,26 @@
+# Función para calcular el promedio
+def calcular_promedio(n1, n2, n3):
+    promedio = (n1 + n2 + n3) / 3
+    return promedio
+
+# Función para validar números (enteros o decimales)
+def pedir_nota(mensaje):
+    while True:
+        try:
+            nota = float(input(mensaje))  # Permite números con decimales
+            return nota
+        except ValueError:
+            print("❌ Error: Solo puedes ingresar números (ej: 8 o 8.5). Intenta otra vez.")
+
+# Programa principal
+print("------ PROMEDIO DE CALIFICACIONES ------")
+
+nota1 = pedir_nota("Ingrese la primera nota: ")
+nota2 = pedir_nota("Ingrese la segunda nota: ")
+nota3 = pedir_nota("Ingrese la tercera nota: ")
+
+# Llamada a la función
+resultado = calcular_promedio(nota1, nota2, nota3)
+
+# Mostrar resultado
+print("El promedio es:", resultado)
